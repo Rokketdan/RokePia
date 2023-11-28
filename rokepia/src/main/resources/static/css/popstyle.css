@@ -1,0 +1,75 @@
+ /*   팝업 종료버튼 스타일  */
+        .popCloseButton {
+	display: block;		
+  	position: fixed;
+  	float: right;
+  	width: 3%;
+  	height: 6%;
+  	padding: 0;
+  	margin: 0;
+  	margin-left: 100%;
+  	font-weight: bold;
+  	font-size: 200%;
+  	text-align: center;
+  	color: #FFF;
+  	line-height: 10%;
+  	background: rgb(0, 0, 0);
+  	
+        }
+
+        /* 팝업 스타일 */
+        .modal-bg {
+			display:none;
+			width:100%;
+			height:100%;
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			background: rgb(0, 0, 0,0.4);z-index:999;}
+        
+        .modal-wrap {
+			display:none;
+        	position:fixed;
+        	top:50%;
+        	left:50%;
+        	transform:translate(-50%,-50%);
+        	width:60%;
+        	height:70%;
+        	background:rgb(0, 0, 0);
+        	z-index:1000;
+        	color: aliceblue;
+        	
+        	
+        	}
+		.image {width:100% ;height:100%; border: 1px solid black;
+				background-size:contain; background-position: top center;
+				background-repeat: no-repeat ;
+		}
+		.layer_popup {height: 100%; width: 100%; background-color: rgb(0, 0, 0);}
+		.right {background-color: rgb(0, 0, 0); float: left ;width: 60% ; overflow: scroll;  height:90%;}
+		
+/*		전체 스크롤범위*/
+		.right::-webkit-scrollbar{
+			display: none;
+			
+			
+		}
+/*		스크롤 잡고움직이는 막대기*/
+		.right::-webkit-scrollbar-thumb{
+			
+			
+		}
+/*		//남은 스크롤버뮈*/
+		.right::-webkit-scrollbar-track{
+			
+			
+		}
+		.right thead tr {}
+		.right tbody tr {font-size: 30px; text-align: center; color: ghostwhite; background-color: rgb(88, 88, 88);
+		height: 300px; border: 3px solid rgb(0, 0, 0);
+		
+		}
+		.right tbody tr TD1{padding: 3px; margin: 3px;}
+		.left {border: 1px solid rgb(0, 0, 0); float: left; width:30%; height: 100%;}
+        

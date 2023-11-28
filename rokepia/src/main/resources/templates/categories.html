@@ -23,15 +23,17 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+     <link rel="stylesheet" href="css/popstyle.css" type="text/css">
 </head>
 
 <body>
+	
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+    <!-- 페이지상단구역 -->
     <header class="header">
         <div class="container">
             <div class="row">
@@ -46,19 +48,19 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                <li class="active"><a href="./index.html">홈페이지</a></li>
+                                <li><a href="./categories.html">카테고리 <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="./categories.html">Categories</a></li>
-                                        <li><a href="./anime-details.html">Anime Details</a></li>
+                                        <li><a href="./categories.html">카테고리</a></li>
+                                        <li><a href="./anime-details.html">성지정보</a></li>
                                         <li><a href="./anime-watching.html">Anime Watching</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li><a href="./signup.html">Sign Up</a></li>
                                         <li><a href="./login.html">Login</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="./blog.html">여행게시판</a></li>
+                                <li><a href="#">건의게시판</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -73,7 +75,7 @@
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- 페이지상단구역 End -->
 
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
@@ -81,9 +83,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./categories.html">Categories</a>
-                        <span>Romance</span>
+                        <a href="./index.html"><i class="fa fa-home"></i> 홈</a>
+                        <a href="./categories.html">카테고리</a>
+                        <span>애니</span>
                     </div>
                 </div>
             </div>
@@ -91,7 +93,7 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Product Section Begin -->
+    <!-- 작품 모음 -->
     <section class="product-page spad">
         <div class="container">
             <div class="row">
@@ -101,12 +103,12 @@
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                     <div class="section-title">
-                                        <h4>Romance</h4>
+                                        <h4>애니</h4>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                     <div class="product__page__filter">
-                                        <p>Order by:</p>
+                                        <p>정렬:</p>
                                         <select>
                                             <option value="">A-Z</option>
                                             <option value="">1-10</option>
@@ -119,96 +121,78 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-1.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-1.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-3.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-3.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-4.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-4.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a></h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-5.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-5.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                       
                                         <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-6.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-6.jpg" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                    
                                         <h5><a href="#">Monogatari Series: Second Season</a></h5>
                                     </div>
                                 </div>
@@ -221,10 +205,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Great Teacher Onizuka</a></h5>
                                     </div>
                                 </div>
@@ -237,10 +218,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Fate/stay night Movie: Heaven's Feel - II. Lost</a></h5>
                                     </div>
                                 </div>
@@ -253,10 +231,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                       
                                         <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
                                     </div>
                                 </div>
@@ -269,10 +244,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                      
                                         <h5><a href="#">Fate/Zero 2nd Season</a></h5>
                                     </div>
                                 </div>
@@ -285,10 +257,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                        
                                         <h5><a href="#">Kizumonogatari II: Nekket su-hen</a></h5>
                                     </div>
                                 </div>
@@ -301,10 +270,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                       
                                         <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
                                     </div>
                                 </div>
@@ -317,10 +283,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                   
                                         <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
                                     </div>
                                 </div>
@@ -333,10 +296,7 @@
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
+                                   
                                         <h5><a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien</a></h5>
                                     </div>
                                 </div>
@@ -416,108 +376,8 @@
                         <a href="#"><i class="fa fa-angle-double-right"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="product__sidebar">
-                        <div class="product__sidebar__view">
-                            <div class="section-title">
-                                <h5>Top Views</h5>
-                            </div>
-                            <ul class="filter__controls">
-                                <li class="active" data-filter="*">Day</li>
-                                <li data-filter=".week">Week</li>
-                                <li data-filter=".month">Month</li>
-                                <li data-filter=".years">Years</li>
-                            </ul>
-                            <div class="filter__gallery">
-                                <div class="product__sidebar__view__item set-bg mix day years"
-                                data-setbg="img/sidebar/tv-1.jpg">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
-                            </div>
-                            <div class="product__sidebar__view__item set-bg mix month week"
-                            data-setbg="img/sidebar/tv-2.jpg">
-                            <div class="ep">18 / ?</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                        </div>
-                        <div class="product__sidebar__view__item set-bg mix week years"
-                        data-setbg="img/sidebar/tv-3.jpg">
-                        <div class="ep">18 / ?</div>
-                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                        <h5><a href="#">Sword art online alicization war of underworld</a></h5>
-                    </div>
-                    <div class="product__sidebar__view__item set-bg mix years month"
-                    data-setbg="img/sidebar/tv-4.jpg">
-                    <div class="ep">18 / ?</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                    <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
-                </div>
-                <div class="product__sidebar__view__item set-bg mix day"
-                data-setbg="img/sidebar/tv-5.jpg">
-                <div class="ep">18 / ?</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <h5><a href="#">Fate stay night unlimited blade works</a></h5>
-            </div>
-        </div>
-    </div>
-    <div class="product__sidebar__comment">
-        <div class="section-title">
-            <h5>New Comment</h5>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-1.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-2.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-3.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-4.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-    </div>
+                
+    
 </div>
 </div>
 </div>
@@ -569,7 +429,83 @@
 </div>
 <!-- Search model end -->
 
-<!-- Js Plugins -->
+<!-- 팝업영역 시작 -->
+<div class="modal-bg" onclick="javascrpit:popClose();"></div> //팝업배경
+	<div class="modal-wrap">
+		<input type='button' value="X"  onclick="javascrpit:popClose();" class="popCloseButton">
+	<section class="layer_popup" >
+	
+	  <div class ="left">
+	  
+	  		<div class="image" style="background-image: url('/img/popular/popular-1.jpg');"></div>
+	  
+	  </div>
+	  
+	  <div class ="right">
+		  <table width="100%">
+			  <thead>
+				  <tr>
+					  <th width="30%"></th>
+					  <th width="70%"></th>
+				  </tr>
+			  </thead>
+			  
+			  <tbody>
+				  <tr>
+					  <td class="TD1" style="background-image: url('/img/popular/popular-1.jpg');" >
+		  
+					  </td>
+					  <td>jajax를 이용해서 데이터를 불러온 다음 출력할려고 했는데부분에서 이미지 로드가 안되고 계속 하얀 바탕이 나왔다.
+						그래서 코드를 계속해서 점검을 했는데 코드에는 이상이 없었고,
+						그렇게 며칠 동안 계속 해답을 못찾다가 구글링을 통해 이유를 찾게 되었다.</td>
+				  </tr>
+				   <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				   <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				   <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				   <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				   <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				  <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				  <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				  <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+				  <tr>
+					  <td>임시이미지</td>
+					  <td>임시본문</td>
+				  </tr>
+			  </tbody>
+		  </table>
+  </div>
+</section>
+	
+	
+
+</div> //팝업영역
+<!-- 팝업영역 끝 -->
+
+<!-- 자바스크립트 코드 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/player.js"></script>
@@ -578,7 +514,7 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
-
+<script src="js/pop.js"></script>
 </body>
 
 </html>
