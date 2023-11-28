@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ContentsController {
 	
 	@GetMapping("contents")
-	public String anime() {
+	public String list() {
 		return "contents/anime";
 	}
 }
