@@ -8,6 +8,6 @@ public class HI {
 
 	@GetMapping("contact")
 	public String contact() {
-		return "travel";
+		return "travelwrite";
 	}
 }
