@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 
+@RequestMapping("member")
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("contents")
-public class ContentsController {
+public class MemberController {
 	
-	@GetMapping("anime")
-	public String list() {
-		return "contents/anime";
+	@GetMapping("login")
+	public String signUp() {
+		return "member/login";
 	}
 }
