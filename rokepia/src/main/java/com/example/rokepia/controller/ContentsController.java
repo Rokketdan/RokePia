@@ -11,6 +11,6 @@ public class ContentsController {
 	
 	@GetMapping("contents")
 	public String list() {
-		return "contents/categories";
+		return "contents/anime";
 	}
 }
