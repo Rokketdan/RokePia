@@ -16,6 +16,11 @@ public class HomeController {
 		log.info("index 페이지 출력");
 	  return "categories";
   }
-	
+	@GetMapping("/a")
+	  public String test() {
+			
+			log.info("index 페이지 출력");
+		  return "anime-details";
+	  }
 	
 }
