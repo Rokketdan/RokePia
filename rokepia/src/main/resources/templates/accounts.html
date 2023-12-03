@@ -6,7 +6,7 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>같이 여행가요</title>
+    <title>마이 페이지</title>
 
 
     
@@ -17,15 +17,8 @@
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/box.css" type="text/css">
-     <link rel="stylesheet" href="css/travel.css" type="text/css">
+    <link rel="stylesheet" href="css/accounts.css">
      
      
      
@@ -95,6 +88,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/accounts.css" type="text/css">
+    
 
 </head>
 
@@ -131,49 +126,115 @@
       </div>
       
     </header>
-<body>
-		<form>
-	            <!-- Form Start -->
-            <div class="container-travel">
-               
+<body id="reportsPage">
 
-                    <div class="col-sm-18 col-xl-11">
-                        <div class="bg-secondary rounded h-30 p-2">
-<!--                            <h6 class="mb-4">같이 여행가요 글쓰기</h6>-->
-								<label for="floatingInput">Title</label>
-                                <input type="text" class="form-control" id="floatingInput"
-                                    placeholder="제목을 입력하세요">
-                            
-                            
-								<label for="floatingTextarea">Comments</label>
-                                <textarea class="form-control" placeholder="내용을 입력하세요."
-                                    id="floatingTextarea" style="height: 300px;"></textarea>
-                            
-                            <p></p>
-                            <h6 class="mb-4">File Input</h6>
-                            <div class="mb-3">
-                                <!--<label for="formFile" class="form-label">첨부파일을 선택하세요</label>-->
-                                <p></p>
-                                <input class="form-control bg-dark" type="file" id="formFile">
-								<p></p>
-                            </div>
-                            
-                            <input type="submit" class="btn_travel" value="등록"></input>
-                            <input type="reset" class="btn_travel" value="다시작성"></input>
-                            
-                            
-                        </div>
-                        
-                    </div>
-                    
-                    
-                  
+      <div class="container mt-5">
+        <div class="row tm-content-row">
+          <div class="col-12 tm-block-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+              <h2 class="tm-block-title">List of Accounts</h2>
+              <p class="text-white">Accounts</p>
+              <select class="custom-select">
+                <option value="0">Select account</option>
+                <option value="1">체크리스트</option>
+                <option value="2">정보수정</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row tm-content-row">
+          <div class="tm-block-col tm-col-avatar">
+            <div class="tm-bg-primary-dark tm-block tm-block-avatar">
+              <h2 class="tm-block-title">Change Avatar</h2>
+              <div class="tm-avatar-container">
+                <img
+                  src="img/avatar.png"
+                  alt="Avatar"
+                  class="tm-avatar img-fluid mb-4"
+                />
+                <a href="#" class="tm-avatar-delete-link">
+                  <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                </a>
+              </div>
+              <button class="btn btn-primary btn-block text-uppercase">
+                Upload New Photo
+              </button>
+            </div>
+          </div>
+          <div class="tm-block-col tm-col-account-settings">
+            <div class="tm-bg-primary-dark tm-block tm-block-settings">
+              <h2 class="tm-block-title">Account Settings</h2>
+              <form action="" class="tm-signup-form row">
+                <div class="form-group col-lg-6">
+                  <label for="name">Account Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    class="form-control validate"
+                  />
                 </div>
-				</form>
-				<p></p>
-            <!-- Form End -->
-	
-	
+                <div class="form-group col-lg-6">
+                  <label for="email">Account Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form-control validate"
+                  />
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="password">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="form-control validate"
+                  />
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="password2">Re-enter Password</label>
+                  <input
+                    id="password2"
+                    name="password2"
+                    type="password"
+                    class="form-control validate"
+                  />
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="phone">Phone</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    class="form-control validate"
+                  />
+                </div>
+                <div class="form-group col-lg-6">
+                  <label class="tm-hide-sm">&nbsp;</label>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block text-uppercase"
+                  >
+                    Update Your Profile
+                  </button>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block text-uppercase"
+                  >
+                    Delete Your Account
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
 	    <footer class="footer">
         <div class="page-up">

@@ -6,9 +6,7 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>같이 여행가요</title>
-
-
+    <title>마이페이지</title>
     
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,19 +14,24 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/box.css" type="text/css">
-     <link rel="stylesheet" href="css/travel.css" type="text/css">
+   	<link rel="stylesheet" href="css/accounts.css" type="text/css">
      
-     
-     
+     <!--추가한것 -->
+       <!-- Tailwind is included -->
+  <link rel="stylesheet" href="css/main.css?v=1628755089081">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-130795909-1');
+  </script>
+
+</head>
    
 </head>
 
@@ -131,48 +134,149 @@
       </div>
       
     </header>
-<body>
-		<form>
-	            <!-- Form Start -->
-            <div class="container-travel">
-               
+	<body>
+	 
+	 <!--여기서 부터 수정 -->
+<div id="app">
 
-                    <div class="col-sm-18 col-xl-11">
-                        <div class="bg-secondary rounded h-30 p-2">
-<!--                            <h6 class="mb-4">같이 여행가요 글쓰기</h6>-->
-								<label for="floatingInput">Title</label>
-                                <input type="text" class="form-control" id="floatingInput"
-                                    placeholder="제목을 입력하세요">
-                            
-                            
-								<label for="floatingTextarea">Comments</label>
-                                <textarea class="form-control" placeholder="내용을 입력하세요."
-                                    id="floatingTextarea" style="height: 300px;"></textarea>
-                            
-                            <p></p>
-                            <h6 class="mb-4">File Input</h6>
-                            <div class="mb-3">
-                                <!--<label for="formFile" class="form-label">첨부파일을 선택하세요</label>-->
-                                <p></p>
-                                <input class="form-control bg-dark" type="file" id="formFile">
-								<p></p>
-                            </div>
-                            
-                            <input type="submit" class="btn_travel" value="등록"></input>
-                            <input type="reset" class="btn_travel" value="다시작성"></input>
-                            
-                            
-                        </div>
-                        
-                    </div>
-                    
-                    
-                  
+
+  <section class="section main-section">  
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
+   
+ 
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i class="mdi mdi-account"></i>Profile</span>
+          </p>
+        </header>
+        <div class="card-content2">
+          <div class="image w-48 h-48 mx-auto">
+            <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+          </div>
+          <hr>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" readonly value="로케피아" class="input is-static">
+            </div>
+          </div>
+          <hr>
+          <div class="field">
+            <label class="label">E-mail</label>
+            <div class="control">
+              <input type="text" readonly value="user@example.com" class="input is-static">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+              <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i class="mdi mdi-account-circle"></i>Edit_Profile</span>
+            
+          </p>
+        </header>
+      <div class="card-content">
+          <form>
+    
+              <label class="label">Avatar</label>
+              <div class="field-body">
+                <div class="field file">
+                  <label class="upload control">
+                    <input type="file">
+                  </label>
                 </div>
-				</form>
-				<p></p>
-            <!-- Form End -->
-	
+              </div>
+   
+            <hr>
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" autocomplete="on" name="name" value="John Doe" class="input" required>
+                  </div>
+                  <p class="help">Required. Your name</p>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">E-mail</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="email" autocomplete="on" name="email" value="user@example.com" class="input" required>
+                  </div>
+                  <p class="help">Required. Your e-mail</p>
+                </div>
+              </div>
+            </div>
+            <hr>
+    
+              <div class="control">
+                <button type="submit" class="button green">
+                  Submit
+                </button>
+              </div>
+            
+          </form>
+        </div>
+      
+    </div>
+      </header>
+      
+
+<!--2번째 상자임 -->
+     
+      </div>
+    </div> <!--app div 태그 -->
+
+  </section>
+
+<!--흐무 -->
+
+<div id="sample-modal" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Sample modal</p>
+    </header>
+    <section class="modal-card-body">
+      <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+      <p>This is sample modal</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button --jb-modal-close">Cancel</button>
+      <button class="button red --jb-modal-close">Confirm</button>
+    </footer>
+  </div>
+</div>
+
+<div id="sample-modal-2" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Sample modal</p>
+    </header>
+    <section class="modal-card-body">
+      <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+      <p>This is sample modal</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button --jb-modal-close">Cancel</button>
+      <button class="button blue --jb-modal-close">Confirm</button>
+    </footer>
+  </div>
+</div>
+
+</div><!-- 여기까지다only -->
+
+
+
+
+<!--오와리 -->
 	
 
 	    <footer class="footer">
@@ -234,9 +338,33 @@
 
   </script>
 
+<!-- Scripts below are for demo only -->
+<script type="text/javascript" src="js/main.min.js?v=1628755089081"></script>
 
+
+<!--ㅎㅅㅎ -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '658339141622648');
+  fbq('track', 'PageView');
+</script>
+
+
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658339141622648&ev=PageView&noscript=1"/></noscript>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+<!--ㅎㅎㅎㅎ -->
 </body>
 </html>
 
 </body>
-</html>
+</html>	

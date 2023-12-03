@@ -117,7 +117,32 @@ a.bbtn {
 }
 
 .container-travel{
+  margin-bottom: 40px;
 
-  	 
+	  margin-left: 20%;
+	  margin-right: 15%;
+
 }
+.btn_travel {
+  background-color:lightgray;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  top: 75%;
+	left: 75%;
+/*  나머지20% <<버튼이 더큰경우  */
+  
+}
+
+
+@media screen and (max-width: 900px) {
+      .btn_travel {
+        left: 50%; 
+        
+      }
+      
+      
+    }
+
 
