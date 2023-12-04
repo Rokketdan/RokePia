@@ -32,11 +32,6 @@ public class HI {
 	}
 	
 	
-	@GetMapping("a")
-	public String a() {
-		return "profile";
-	}
-	
 	@GetMapping("accounts")
 	public String abc() {
 		return "accounts";
