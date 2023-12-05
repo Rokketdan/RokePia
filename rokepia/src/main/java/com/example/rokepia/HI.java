@@ -36,4 +36,20 @@ public class HI {
 	public String abc() {
 		return "accounts";
 	}
+	
+	@GetMapping("a")
+	public String abcdd() {
+		return "freeboardlist";
+	}
+	
+	@GetMapping("anime")
+	public String abcddee() {
+		return "anime-details";
+	}
+	
+	
+	@GetMapping("categories")
+	public String ddabcddee() {
+		return "categories";
+	}
 }
