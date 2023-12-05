@@ -441,6 +441,10 @@ ol {
 /*---------------------
   Hero
 -----------------------*/
+video{
+	max-width: 100%;
+	height: auto;
+}
 
 .hero {
 	padding-top: 50px;
@@ -1343,7 +1347,7 @@ ol {
 }
 
 .normal__breadcrumb__text h2 {
-	color: #ffffff;
+	color: white;
 	font-size: 48px;
 	font-family: "Oswald", sans-serif;
 	font-weight: 700;
@@ -1351,7 +1355,7 @@ ol {
 }
 
 .normal__breadcrumb__text p {
-	color: #ffffff;
+	color: white;
 	font-size: 24px;
 	margin-bottom: 0;
 }
