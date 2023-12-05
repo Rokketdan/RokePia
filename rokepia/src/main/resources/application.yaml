@@ -18,7 +18,5 @@ spring:
         10MB
 
 mybatis:
-  config-location: classpath:config/mybatis-config.xml
+  #src/main/resources/mapper 아래 있는 모든 xml 파일을 가져온다는 문법
   mapper-locations: classpath:mapper/**/*.xml
-
-
