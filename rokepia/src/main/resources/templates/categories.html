@@ -436,9 +436,15 @@
 	<section class="layer_popup" >
 	
 	  <div class ="left">
-	  
-	  		<div class="image" style="background-image: url('/img/popular/popular-1.jpg');"></div>
-	  		<div class="contents_title">나루토</div>
+	  <div class="image">
+		    <div class="imagein" style="background-image: url('/img/popular/popular-1.jpg');">
+			  <button class="goodinfo">10/10</button>
+			  <button class="locainfo">성지수</button>
+			  <button class="lookinfo">조회수</button>
+			</div>
+	  </div>
+	  		
+	  <div class="contents_title">나루토</div>
 	  
 	  </div>
 	  
@@ -460,42 +466,51 @@
 
 그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니, 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 괴물 구미호를 봉인하지만, 목숨을 잃고 만다. 그 닌자는 '4대 호카게'라고 한다..</td>
 				  </tr>
-				   <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
+				  
+				  <tr th:each="test, testStat : ${testModel}">
+					  <td class="TD1">
+		  				<img th:src="@{${test.image}}">
+					  </td>
+					  <td class="gray" th:text="${test.info}">
 				  </tr>
-				   <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				   <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				   <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				   <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				  <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				  <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				  <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
-				  <tr>
-					  <td>임시이미지</td>
-					  <td>임시본문</td>
-				  </tr>
+				  
+				  
+<!--				   <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				   <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				   <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				   <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				   <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				  <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				  <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				  <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
+<!--				  <tr>-->
+<!--					  <td>임시이미지</td>-->
+<!--					  <td>임시본문</td>-->
+<!--				  </tr>-->
 			  </tbody>
 		  </table>
   </div>
