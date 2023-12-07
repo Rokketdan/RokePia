@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.rokepia.model.LocationTest;
+import com.example.rokepia.model.Location;
 
 @Mapper
 public interface TestMapper {
-	List<LocationTest> testAllSelect(); 
-	LocationTest testOneSelect(Long LocationId); 
+	List<Location> testAllSelect(); 
+	Location testOneSelect(Long LocationId); 
 }

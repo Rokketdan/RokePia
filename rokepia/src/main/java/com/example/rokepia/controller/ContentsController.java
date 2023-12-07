@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.rokepia.model.LocationTest;
+import com.example.rokepia.model.Location;
 import com.example.rokepia.repository.TestMapper;
 
 import org.springframework.stereotype.Controller;
@@ -31,7 +31,7 @@ public class ContentsController {
   public String home(Model model) {
 		log.info("index 페이지 출력시작");
 		
-		List<LocationTest> humu = test.testAllSelect();
+		List<Location> humu = test.testAllSelect();
 		model.addAttribute("testModel",humu);
 		log.info("index 페이지 정성작동 함수종료");
 	  return "categories";
@@ -49,5 +49,8 @@ public class ContentsController {
 	public String list() {
 		return "contents/anime";
 	}
-
+	@GetMapping("test")
+	public String liat() {
+		return "test";
+	}
 }

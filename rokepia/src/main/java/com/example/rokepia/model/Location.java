@@ -3,7 +3,7 @@ package com.example.rokepia.model;
 import lombok.Data;
 
 @Data
-public class LocationTest {
+public class Location {
 	 Long LocaitonId;
 	 String info;
 	 String place;
