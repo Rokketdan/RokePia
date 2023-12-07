@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-    @media screen and (max-width: 1074px){
-      .map iframe{
-         width: 300px;
-         height:300px;
-    }
-}
