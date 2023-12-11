@@ -140,9 +140,8 @@
 				</div>-->
 	<!--API 구현 연습중 -->
 	<!--<div id="googleMap" style="width: 100%;height: 700px;"></div>-->
-	<div id="map" style="width: 100%;height: 700px;"></div>
+   <div id="map" style="width: 100%;height: 700px;" data-locations-th="${locations}">
 
-		
 				
 				<p>
                 <div class="row">
@@ -285,70 +284,38 @@
         <script src="js/jquery.slicknav.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
+        
 
 		<!--트위터 설정 스크립트 -->
 
 		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 	<!--API 설정 스크립트 -->
-<!--	<script>
-   function myMap(){
-      var mapOptions = { 
-            center:new google.maps.LatLng(51.508742, -0.120850),
-            zoom:5
-      };
- 
-      var map = new google.maps.Map( 
-             document.getElementById("googleMap") 
-            , mapOptions );
-   }
-	</script> -->
 	
-    <!-- 자바스크립트 코드 -->
-        <!-- 자바스크립트 코드 -->
-    <script>
-        // Google Maps 초기화 함수
-        function initMap() {
-            // 일본 중심 좌표
-            var japan = { lat: 36.236729062134685, lng: 137.189600722708 };
-			
-			// 장소 배열로
-			var locations = [
-				['하다후루카와 역',36.236729062134685, 137.189600722708],
-				['나카야',36.234185471844974,137.18576262464973],
-				['후루카와',36.23580499741539,137.18526215293613]
-			];			
+<!-- JavaScript로 Thymeleaf에서 가져온 데이터 사용 -->
+<script th:inline="javascript">
+    // Google 지도 초기화
+    function initMap() {
+		console.log('불러오나');
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 36.236729062134685, lng: 137.189600722708},
+            zoom:15 
+        });
 
-
-            // 지도 생성
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,  // 확대 수준
-                center: japan  // 지도 중심 좌표
+        // 각 위치에 대한 마커 추가
+        var locations = /*[[${locations}]]*/ [];
+        locations.forEach(function(location) {
+            var marker = new google.maps.Marker({
+                position: {lat: location.latitude, lng: location.longitude}
             });
-			
-			var infowindow = new google.maps.InfoWindow();
-			
-			var marker, i;
-			
-			for (i = 0; i < locations.length; i++){
-			marker = new google.maps.Marker({
-				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-				map: map
-			});	
-			
-			google.maps.event.addListener(marker, 'click', (function(marker,i)
-			{
-				
-				return function(){
-					infowindow.setContent(locations[i],[0]);
-					infowindow.open(map,marker);
-				}
-			})(marker, i));
-			}
-				
-			}            
-	
-    </script>
+            marker.setMap(map);
+        });
+    }
+</script>
+
+
+
+
 
 <!-- Google Maps API 스크립트 추가 -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBU35_1TQaJN2J3Oc2rdsuwC9PWe05-2s&callback=initMap" 
