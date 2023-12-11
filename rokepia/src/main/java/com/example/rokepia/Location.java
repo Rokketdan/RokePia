@@ -18,6 +18,9 @@ public class Location {
     private String name;
     private Double latitude;
     private Double longitude;
+    private String imageUrl1;
+    private String imageUrl2;
+    private String place;
 
     // getters and setters
 }

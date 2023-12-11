@@ -296,22 +296,36 @@
 <script th:inline="javascript">
     // Google 지도 초기화
     function initMap() {
-		console.log('불러오나');
+        console.log('불러오나');
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 36.236729062134685, lng: 137.189600722708},
-            zoom:15 
+            zoom: 15 
         });
 
-        // 각 위치에 대한 마커 추가
+        // 각 위치에 대한 마커와 정보창 추가
         var locations = /*[[${locations}]]*/ [];
         locations.forEach(function(location) {
             var marker = new google.maps.Marker({
-                position: {lat: location.latitude, lng: location.longitude}
+                position: {lat: location.latitude, lng: location.longitude},
+                map: map
             });
-            marker.setMap(map);
+
+            // 정보창 생성
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<div style="font-size: 18px; font-weight: bold;"><strong>' + location.name + '</strong><br>' +
+                         '<img src="' + location.imageUrl1 + '" alt="Location Image 1" style="width: 350px; height: 190px; margin-bottom: 10px;">' +
+         				 '<img src="' + location.imageUrl2 + '" alt="Location Image 2" style="width: 350px; height: 190px;"><p></p>' +
+                         'place: ' + location.place + '</div>'
+            });
+
+            // 마커를 클릭할 때 정보창 열기
+            marker.addListener('click', function() {
+                infoWindow.open(map, marker);
+            });
         });
     }
 </script>
+
 
 
 
