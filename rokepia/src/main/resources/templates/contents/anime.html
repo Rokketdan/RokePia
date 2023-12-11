@@ -126,7 +126,7 @@
 							
 							<div class="col-lg-4 col-md-6 col-sm-6">-->
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">
+                                    <div class="product__item__pic set-bg" data-setbg="/img/contents/anime/anime-1.png" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -144,14 +144,16 @@
 							
 							
 							
-							<!--  반복시작-->
-							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 : ${testModel2}">-->
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">
-                                        <div class="ep" >7</div>
-                                        <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
-                                        <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>
-                                    </div>
+							<!-- contents 반복시작-->
+							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 ,test2Stat : ${testModel2}">-->
+<!--								<div th:text="${test2.contents_id}" th:name="${test2Stat.count}"></div>-->
+                                	<div class="product__item">
+	                                    <div class="product__item__pic set-bg" th:data-setbg="${test2.image}" th:onClick="'javascript:popOpen(' + ${test2.contents_id} + ');'">
+											<div class="ep" >7</div>
+	                                        <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
+	                                        <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>
+										</div>
+                  
                                     <div class="product__item__text">
                                         <ul>
                                             <li>Active</li>
@@ -161,111 +163,8 @@
                                     </div>
                                 </div>
                             </div>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">최애의 아이</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-2.png">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">주술회전</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-3.jpg">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">장송의 프리렌</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-4.jpg">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">제로의 사역마</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-5.jpg">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">진격의 거인</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
-<!--                                <div class="product__item">-->
-<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-6.jpg">-->
-<!--                                        <div class="ep">18 / 18</div>-->
-<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
-<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="product__item__text">-->
-<!--                                        <ul>-->
-<!--                                            <li>Active</li>-->
-<!--                                            <li>Movie</li>-->
-<!--                                        </ul>-->
-<!--                                        <h5><a href="#">도쿄리벤져스</a></h5>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!-- contents 반복 끝-->
+		
                           </div>
                        </div>   
                     <div class="product__pagination">
@@ -354,103 +253,6 @@
         </form>
     </div>
 </div>
-<!-- Search model end -->
-
-<!--<div class="modal-bg" onclick="javascrpit:popClose();"></div> //팝업배경-->
-<!--	<div class="modal-wrap">-->
-<!--		<input type='button' value="X"  onclick="javascrpit:popClose();" class="popCloseButton">-->
-<!--	<section class="layer_popup" >-->
-	
-<!--	  <div class ="left">-->
-<!--	  <div class="image">-->
-<!--		    <div class="imagein" style="background-image: url('/img/ani/anime-1.png');">-->
-<!--			  <button class="goodinfo">10/10</button>-->
-<!--			  <button class="locainfo">성지수</button>-->
-<!--			  <button class="lookinfo">조회수</button>-->
-<!--			</div>-->
-<!--	  </div>-->
-	  		
-<!--	  <div class="contents_title">나루토</div>-->
-	  
-<!--	  </div>-->
-	  
-<!--	  <div class ="right">-->
-<!--		  <table width="100%">-->
-<!--			  <thead>-->
-<!--				  <tr>-->
-<!--					  <th width="30%"></th>-->
-<!--					  <th width="70%"></th>-->
-<!--				  </tr>-->
-<!--			  </thead>-->
-			  
-<!--			  <tbody>-->
-<!--				  <tr>-->
-<!--					  <td class="TD1">-->
-<!--		  				<img src="/img/ani/anime-2.png">-->
-<!--					  </td>-->
-<!--					  <td class="gray">옛날에 괴물 구미호가 있었다. 꼬리가 아홉 달린 구미호였다.-->
-
-<!--그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니, 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 괴물 구미호를 봉인하지만, 목숨을 잃고 만다. 그 닌자는 '4대 호카게'라고 한다..</td>-->
-<!--				  </tr>-->
-				  
-<!--				  <tr th:each="test, testStat : ${testModel}">-->
-<!--					  <td class="TD1">-->
-<!--		  				<img th:src="@{${test.image}}">-->
-<!--					  </td>-->
-<!--					  <td class="gray" th:text="${test.info}">-->
-<!--				  </tr>-->
-				  
-				  
-<!--				   <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				   <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				   <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				   <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				   <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				  <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				  <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				  <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--				  <tr>-->
-<!--					  <td>임시이미지</td>-->
-<!--					  <td>임시본문</td>-->
-<!--				  </tr>-->
-<!--			  </tbody>-->
-<!--		  </table>-->
-<!--  </div>-->
-<!--</section>-->
-	
-	
-
-<!--</div> //팝업영역-->
-
-
-
-
-
-
 
 <!-- Js Plugins -->
 <script src="/js/jquery-3.3.1.min.js"></script>
@@ -462,6 +264,7 @@
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/pop.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <!--<div th:replace="fragment :: asd"></div>-->
 <div th:insert="~{/test :: asd}"></div>
