@@ -14,4 +14,11 @@
     	location_id = #{LocationId}
   </select>
   
+  <select id="testContentsSelect" resultType="com.example.rokepia.model.Location">
+    select * from location 
+    where
+    	contents_id = #{ContentsId}
+  </select>
+  
+  
 </mapper>

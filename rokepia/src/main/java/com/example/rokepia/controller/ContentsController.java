@@ -14,7 +14,7 @@ import com.example.rokepia.repository.TestMapper2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +36,8 @@ public class ContentsController {
 		
 		List<Location> humu = test.testAllSelect();
 		model.addAttribute("testModel",humu);
-		log.info("index 페이지 정성작동 함수종료");
+		log.info("index 페이지 정성작동 함수종료:{}",humu);
+		
 	  return "categories";
   }
 	@GetMapping("/a")
@@ -52,6 +53,7 @@ public class ContentsController {
 	public String list(Model model) {
 		List<Location> humu = test.testAllSelect();
 		List<Contents> humu2 = test2.test2AllSelect();
+	
 		model.addAttribute("testModel",humu); //성지
 		model.addAttribute("testModel2",humu2); //컨턴츠
 		return "contents/anime";
