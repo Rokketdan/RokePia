@@ -139,7 +139,8 @@
 <iframe src="https://www.google.com/maps/d/embed?mid=1Q46Jt3mn7jaRLKrAlvuZMUn8Qru35oA&hl=ja&ehbc=2E312F" width="1200" height="600"></iframe></iframe>
 				</div>-->
 	<!--API 구현 연습중 -->
-	<div id="googleMap" style="width: 100%;height: 700px;"></div>
+	<!--<div id="googleMap" style="width: 100%;height: 700px;"></div>-->
+	<div id="map" style="width: 100%;height: 700px;"></div>
 
 		
 				
@@ -218,8 +219,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="anime__details__sidebar">
                             <div class="section-title">
-                                <h5>트위터 자리임</h5>
-              <!--다크 -->
+                                <h5>twitter</h5>
+                                <p>
 								  <a class="twitter-timeline" data-width="400" data-height="600" data-theme="light" href="https://twitter.com/chiikawa_m_kr?ref_src=twsrc%5Etfw">Tweets by chiikawa_m_kr</a>
                                 
                             </div>
@@ -290,7 +291,7 @@
 		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 	<!--API 설정 스크립트 -->
-	<script>
+<!--	<script>
    function myMap(){
       var mapOptions = { 
             center:new google.maps.LatLng(51.508742, -0.120850),
@@ -301,8 +302,57 @@
              document.getElementById("googleMap") 
             , mapOptions );
    }
-	</script> 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBU35_1TQaJN2J3Oc2rdsuwC9PWe05-2s&callback=myMap"></script>	
+	</script> -->
+	
+    <!-- 자바스크립트 코드 -->
+        <!-- 자바스크립트 코드 -->
+    <script>
+        // Google Maps 초기화 함수
+        function initMap() {
+            // 일본 중심 좌표
+            var japan = { lat: 36.236729062134685, lng: 137.189600722708 };
+			
+			// 장소 배열로
+			var locations = [
+				['하다후루카와 역',36.236729062134685, 137.189600722708],
+				['나카야',36.234185471844974,137.18576262464973],
+				['후루카와',36.23580499741539,137.18526215293613]
+			];			
+
+
+            // 지도 생성
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,  // 확대 수준
+                center: japan  // 지도 중심 좌표
+            });
+			
+			var infowindow = new google.maps.InfoWindow();
+			
+			var marker, i;
+			
+			for (i = 0; i < locations.length; i++){
+			marker = new google.maps.Marker({
+				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+				map: map
+			});	
+			
+			google.maps.event.addListener(marker, 'click', (function(marker,i)
+			{
+				
+				return function(){
+					infowindow.setContent(locations[i],[0]);
+					infowindow.open(map,marker);
+				}
+			})(marker, i));
+			}
+				
+			}            
+	
+    </script>
+
+<!-- Google Maps API 스크립트 추가 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBU35_1TQaJN2J3Oc2rdsuwC9PWe05-2s&callback=initMap" 
+            async defer></script>
 
     </body>
 
