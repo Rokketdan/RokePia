@@ -56,6 +56,8 @@ public class ContentsController {
 		model.addAttribute("testModel2",humu2); //컨턴츠
 		return "contents/anime";
 	}
+
+	
 	@GetMapping("test")
 	public String liat() {
 		return "test";

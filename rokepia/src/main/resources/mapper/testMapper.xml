@@ -8,10 +8,10 @@
     select * from location 
   </select>
   
-    <select id="testOneSelect" resultType="com.example.rokepia.model.Location">
+    <select id="testSelectById" resultType="com.example.rokepia.model.Location">
     select * from location 
     where
-    	location_id = #{LocationId}
+    	contents_id = #{contentsId}
   </select>
   
 </mapper>

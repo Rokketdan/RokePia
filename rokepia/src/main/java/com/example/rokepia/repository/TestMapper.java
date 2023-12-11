@@ -9,5 +9,5 @@ import com.example.rokepia.model.Location;
 @Mapper
 public interface TestMapper {
 	List<Location> testAllSelect(); 
-	Location testOneSelect(Long LocationId); 
+	 List<Location> testSelectById(Long LocationId); 
 }
