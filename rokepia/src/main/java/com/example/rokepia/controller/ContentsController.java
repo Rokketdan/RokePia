@@ -6,8 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.rokepia.model.Contents;
 import com.example.rokepia.model.Location;
 import com.example.rokepia.repository.TestMapper;
+import com.example.rokepia.repository.TestMapper2;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ContentsController {
 
 	private final TestMapper test;
+	private final TestMapper2 test2;
 	
 	//카테고리 테스트
 	@GetMapping("/")
@@ -46,7 +49,11 @@ public class ContentsController {
 
 	
 	@GetMapping("anime")
-	public String list() {
+	public String list(Model model) {
+		List<Location> humu = test.testAllSelect();
+		List<Contents> humu2 = test2.test2AllSelect();
+		model.addAttribute("testModel",humu); //성지
+		model.addAttribute("testModel2",humu2); //컨턴츠
 		return "contents/anime";
 	}
 	@GetMapping("test")

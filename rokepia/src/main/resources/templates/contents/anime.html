@@ -96,7 +96,7 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Product Section Begin -->
+    <!-- 컨텐츠목록시작 -->
     <section class="product-page spad">
         <div class="container">
             <div class="row">
@@ -122,7 +122,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
+							
+							
+							<div class="col-lg-4 col-md-6 col-sm-6">-->
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
@@ -134,90 +136,136 @@
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="#">최애의 아이</a></h5>
+                                        
+                                        <h5><a onClick="javascript:popOpen();">최애의 아이</a></h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
+							
+							
+							
+							<!--  반복시작-->
+							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 : ${testModel2}">-->
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-2.png">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">
+                                        <div class="ep" >7</div>
+                                        <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
+                                        <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="#">주술회전</a></h5>
+                                        <h5><a onClick="javascript:popOpen();" th:text="${test2.title}"></a></h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">장송의 프리렌</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-4.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">제로의 사역마</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-5.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">진격의 거인</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-6.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">도쿄리벤져스</a></h5>
-                                    </div>
-                                </div>
-                            </div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">최애의 아이</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-2.png">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">주술회전</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-3.jpg">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">장송의 프리렌</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-4.jpg">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">제로의 사역마</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-5.jpg">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">진격의 거인</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-4 col-md-6 col-sm-6">-->
+<!--                                <div class="product__item">-->
+<!--                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-6.jpg">-->
+<!--                                        <div class="ep">18 / 18</div>-->
+<!--                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>-->
+<!--                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="product__item__text">-->
+<!--                                        <ul>-->
+<!--                                            <li>Active</li>-->
+<!--                                            <li>Movie</li>-->
+<!--                                        </ul>-->
+<!--                                        <h5><a href="#">도쿄리벤져스</a></h5>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                           </div>
                        </div>   
                     <div class="product__pagination">
