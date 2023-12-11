@@ -124,9 +124,9 @@
                         <div class="row">
 							
 							
-							<div class="col-lg-4 col-md-6 col-sm-6">-->
+							<div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="/img/ani/anime-1.png" onClick="javascript:popOpen();">
+                                    <div class="product__item__pic set-bg" data-setbg="/img/contents/anime/anime-1.png" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -145,10 +145,12 @@
 							
 							
 							<!-- contents 반복시작-->
-							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 ,test2Stat : ${testModel2}">-->
-								<div th:text="${test2.contents_id}" th:name="${test2Stat.count}"></div>
+							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 ,test2Stat : ${testModel2}">
+<!--								<div th:text="${test2.contents_id}" th:name="${test2Stat.count}"></div>-->
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" th:data-setbg="${test2.image}" th:onClick="'javascript:popOpen(' + ${test2.contents_id} + ');'"></div>
+										<div class="product__item__pic set-bg"    th:data-setbg="${test2.image}" th:onclick="'javascript:popOpen(' + ${test2.contents_id} + ');'">
+<!--										<div class="product__item__pic set-bg"    th:data-setbg="${test2.image}" th:onclick="'javascript:popOpen(' + ${test2.contents_id} + ',\'' + @{${test2.image}} + '\');'">-->
+                                    
                                         <div class="ep" >7</div>
                                         <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
                                         <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>

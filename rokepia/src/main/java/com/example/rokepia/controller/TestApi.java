@@ -2,9 +2,11 @@ package com.example.rokepia.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,17 +30,25 @@ import com.example.rokepia.model.Contents;
 @Slf4j
 public class TestApi {
 	
-	private final TestMapper test1;
-	private final TestMapper2 test2;
+	private final TestMapper test1; // 로케이션
+	private final TestMapper2 test2; // 콘텐츠
 	
 	
 	@GetMapping("humuhumu")
-	public ResponseEntity<List<Location>> responseBodyV3(@RequestParam("contentsId") String contentsId){
-		List<Location> data = new ArrayList();
-		log.info("이거 들어감:{}",contentsId);
-		data = test1.testSelectById(Long.parseLong(contentsId));
-		
-		
-		return new ResponseEntity<List<Location>>(data,HttpStatus.CREATED);
+	public ResponseEntity<Map<String, Object>> responseBodyV3(@RequestParam("contentsId") String contentsId) {
+	    Map<String, Object> response = new HashMap<>();
+	    List<Location> locations = new ArrayList<>();
+	    Contents content = null;
+	    
+	    log.info("이거 들어감:{}", contentsId);
+	    
+	    // 리스트 타입 반환
+	    locations = test1.testSelectById(Long.parseLong(contentsId));
+	    content = test2.test2OneSelect(Long.parseLong(contentsId));
+	    
+	    response.put("location", locations);
+	    response.put("content", content); // 예시로 추가된 값
+	    
+	    return new ResponseEntity<>(response, HttpStatus.CREATED);
 	}
 }
