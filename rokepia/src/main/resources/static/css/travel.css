@@ -28,7 +28,7 @@ div.card {
   .card__image-holder {
     background: rgba(0,0,0,0.1);
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 55%;
   }
 
   div.card-title {
@@ -36,20 +36,20 @@ div.card {
     padding: 6px 15px 10px;
     position: relative;
     z-index: 0;
-    font-size: 20px;
-	text-align: center;
-	font-weight: bold;
+    font-size: 15px;
+   text-align: center;
+   font-weight: bold;
   }
   
 
   div.card-description {
     padding: 0 15px 10px;
     position: relative;
-    font-size: 30px;
+    font-size: 15px;
   }
 
   div.card-actions {
-  	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.075);
     padding: 10px 15px 20px;
     text-align: center;
   }
@@ -74,26 +74,26 @@ div.card {
 a.btn {
   background:#999;
   border-radius: 8px;
-	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+   box-shadow: 0 4px 0px 0 rgba(0,0,0,0.25);
   color: white;
   display: inline-block;
-  padding: 3px 15px 4px;
+  padding: 6px 15px 4px;
   position: relative;
   text-decoration: none;
-	transition: all 0.1s 0s ease-out;
-	margin-left: 67%;
+   transition: all 0.1s 0s ease-out;
+   margin-left: 67%;
 }
 
 a.bbtn {
-	background:#999;
-	border-radius: 8px;
-	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-  	color: black;
-  	display: inline-block;
-  	padding: 3px 15px 8px;
- 	position: relative;
-	margin-left: 83%;
-	transition: all 0.1s 0s ease-out;
+   background:#999;
+   border-radius: 8px;
+   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+     color: black;
+     display: inline-block;
+     padding: 3px 15px 8px;
+    position: relative;
+   margin-left: 83%;
+   transition: all 0.1s 0s ease-out;
 
 }
 
@@ -107,20 +107,20 @@ a.bbtn {
 
 
 .btn-toolbar{
-	text-align: center;
-	  margin:80px auto;
-	  margin-left: 38%;
+   text-align: center;
+     margin:80px auto;
+     margin-left: 38%;
 }
 
 .add_date{
-	text-align: right;
+   text-align: right;
 }
 
 .container-travel{
   margin-bottom: 40px;
 
-	  margin-left: 20%;
-	  margin-right: 15%;
+     margin-left: 20%;
+     margin-right: 15%;
 
 }
 .btn_travel {
@@ -130,7 +130,7 @@ a.bbtn {
   margin-bottom: 40px;
   position: relative;
   top: 75%;
-	left: 75%;
+   left: 75%;
 /*  나머지20% <<버튼이 더큰경우  */
   
 }
@@ -148,5 +148,4 @@ a.bbtn {
 .travel_img{
 margin-left: 8%;
 }    
-
 
