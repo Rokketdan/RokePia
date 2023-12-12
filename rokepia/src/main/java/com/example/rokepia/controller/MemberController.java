@@ -34,12 +34,12 @@ public class MemberController {
 	}
 	
 	@PostMapping("signup")
-	public String signUp(@ModelAttribute("member") MemberSignup memberSignUp, Model model) {
+	public String signUp(@ModelAttribute("member") Member member, Model model) {
 		
 		// 회원가입 처리
-		log.info("member:{}", memberSignUp);
+		log.info("member:{}", member);
 		
-		memberService.saveMember(MemberSignup.toMember(memberSignUp));
+		memberService.saveMember(member);
 		
 		return "redirect:/";
 	}
@@ -55,14 +55,14 @@ public class MemberController {
 	public String login(@ModelAttribute("login") MemberLogin memberLogin, HttpServletRequest request,
 						@RequestParam(defaultValue = "/") String redirectURL) {
 		
+		log.info("MemberLogin: {}", memberLogin);
+		log.info("redirectURL: {}", redirectURL);
+		
 		Member findMember = memberService.findMember(memberLogin.getMember_email());
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("loginMember", findMember);
-		
 				
 		return "redirect:" + redirectURL;
-		
 	}
-	
 }

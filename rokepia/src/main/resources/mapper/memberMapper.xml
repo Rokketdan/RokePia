@@ -9,14 +9,18 @@
 			member_email,
 			name,
 			password,
-			profile,
 			gender
 		) VALUES (
 			#{member_email},
 			#{name},
 			#{password},
-			#{profile},
 			#{gender}
 		)
 	</insert>
+	
+	<select id="findMember" resultType="member">
+		select * from member where member_email = #{member_email}
+	</select>
+	
+	
 </mapper>

@@ -35,15 +35,18 @@
                         <h3> 회원가입 </h3>
                         <form action="signup" method="post" th:object="${member}">
                             <div class="input__item" >
-                                <input type="text" placeholder="이메일">
+								<label class="form-label"> 아이디(Email) </label>
+                                <input type="email" th:field="*{member_email}" placeholder="이메일을 입력해주세요.">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="이름">
+								<label class="form-label"> 이름 </label>
+                                <input type="text" th:field="*{name}" placeholder="이름을 입력해주세요.">
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="비밀번호">
+								<label class="form-label"> 비밀번호 </label>
+                                <input type="text" th:field="*{password}" placeholder="비밀번호를 입력해주세요.">
                                 <span class="icon_lock"></span>
                             </div>
                             <style>
@@ -52,16 +55,11 @@
     							}
 							</style>
 	                        <div class="input__item">
-	                            <label for="gender">성별:</label>
-	                            <div class="form-check form-check-inline">
-	                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-	                                <label class="form-check-label" for="male">남성</label>
-	                            </div>
-	                            <div class="form-check form-check-inline">
-	                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-	                                <label class="form-check-label" for="female">여성</label>
-	                            </div>
-	                        </div>
+								<label class="form-label"> 성별 </label>
+								<select th:field="*{gender}">
+									<option value="MALE"> 남자 </option>
+									<option value="FEMALE"> 여자 </option>
+								</select>
                             <button type="submit" class="site-btn"> 등록하기 </button>
                         </form>
                         <h5> 이미 계정이 있으신가요? <a href="/member/login"> 로그인 </a></h5>
