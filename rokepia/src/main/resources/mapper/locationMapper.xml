@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.rokepia.repository.LocationRepository">
+
+    <!-- 모든 위치 정보를 가져오는 쿼리 -->
+    <select id="findAll" resultType="com.example.rokepia.Location">
+        SELECT * FROM locations
+    </select>
+
+</mapper>
