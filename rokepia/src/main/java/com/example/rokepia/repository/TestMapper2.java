@@ -10,5 +10,5 @@ import com.example.rokepia.model.Contents;
 @Mapper
 public interface TestMapper2 {
 	List<Contents> test2AllSelect(); 
-	Contents test2OneSelect(Long ContentsId); 
+	Contents test2OneSelect(Long contentsId); 
 }

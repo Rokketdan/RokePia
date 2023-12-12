@@ -11,7 +11,7 @@
     <select id="test2OneSelect" resultType="com.example.rokepia.model.Contents">
     select * from contents 
     where
-    	contents_id = #{ContentsId}
+    	contents_id = #{contentsId}
   </select>
   
 </mapper>

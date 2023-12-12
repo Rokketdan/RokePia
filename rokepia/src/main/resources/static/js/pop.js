@@ -1,17 +1,29 @@
-//콘텐츠 창에서 팝업클릭.
-function popLoad() {
-	var contentId = $();
-}
+
 
 function getJson(contentsId) {
     $.ajax({
         url: "http://localhost:9001/humuhumu?contentsId="+contentsId,
         type: "get",
         dataType: "json",
-        success: function(data) {
-            console.log(data);
+        success: function(response) {
+            console.log(response);
+            
+            
+            // 반환받은 콘텐츠
+            var content = response.content;
+            var data = response.location;
 
             var htmlContent = ""; // 새로운 HTML 내용을 저장할 변수
+            // JavaScript를 사용하여 style 속성의 background-image URL 변경
+	        var imageinDiv = document.querySelector('.imagein');
+	        var newImageUrl = content.image; // 새로운 이미지의 경로
+	
+	        // background-image 속성 변경
+	        imageinDiv.style.backgroundImage = 'url(' + newImageUrl + ')';
+	        
+	        // contents_title의 값을 변경
+	        var contentsTitleElement = document.querySelector('.contents_title');
+            contentsTitleElement.textContent = content.title;
 
             for (var i = 0; i < data.length; i++) {
                 var image = data[i].image;

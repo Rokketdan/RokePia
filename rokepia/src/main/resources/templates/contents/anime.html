@@ -124,7 +124,7 @@
                         <div class="row">
 							
 							
-							<div class="col-lg-4 col-md-6 col-sm-6">-->
+							<div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="/img/contents/anime/anime-1.png" onClick="javascript:popOpen();">
                                         <div class="ep">18 / 18</div>
@@ -145,21 +145,22 @@
 							
 							
 							<!-- contents 반복시작-->
-							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 ,test2Stat : ${testModel2}">-->
-<!--								<div th:text="${test2.contents_id}" th:name="${test2Stat.count}"></div>-->
-                                	<div class="product__item">
-	                                    <div class="product__item__pic set-bg" th:data-setbg="${test2.image}" th:onClick="'javascript:popOpen(' + ${test2.contents_id} + ');'">
-											<div class="ep" >7</div>
-	                                        <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
-	                                        <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>
-										</div>
-                  
+
+
+							<div class="col-lg-4 col-md-6 col-sm-6" th:each="test2 ,test2Stat : ${testModel2}">
+                                <div class="product__item">
+										<div class="product__item__pic set-bg"    th:data-setbg="${test2.image}" th:onclick="'javascript:popOpen(' + ${test2.contents_id} + ');'">                
+                                        <div class="ep" >7</div>
+                                        <div class="comment" th:text="${test2.location_count}"><i class="fa fa-comments"></i> </div>
+                                        <div class="view" th:text="${test2.view_count}"><i class="fa fa-eye"></i> </div>
+                                    </div>
+
                                     <div class="product__item__text">
                                         <ul>
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a onClick="javascript:popOpen();" th:text="${test2.title}"></a></h5>
+                                        <h5><a th:onclick="'javascript:popOpen(' + ${test2.contents_id} + ');'" th:text="${test2.title}"></a></h5>
                                     </div>
                                 </div>
                             </div>
