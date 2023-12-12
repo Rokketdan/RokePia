@@ -3,7 +3,7 @@ function popLoad() {
 	var contentId = $();
 }
 
-function getJson(contentsId, contentsImg) {
+function getJson(contentsId) {
     $.ajax({
         url: "http://localhost:9001/humuhumu?contentsId="+contentsId,
         type: "get",

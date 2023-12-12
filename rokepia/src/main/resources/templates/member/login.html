@@ -99,13 +99,13 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3> 로그인 </h3>
-                        <form action="#">
+                        <form action="" method="post" th:object="${login}">
                             <div class="input__item">
-                                <input type="text" placeholder="이메일">
+                                <input type="email" th:field="*{member_email}" placeholder="이메일">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="비밀번호">
+                                <input type="text" th:field="*{password}" placeholder="비밀번호">
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Login</button>
